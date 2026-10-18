@@ -1,0 +1,37 @@
+# 🧪 Lab 01: Foundations & Integrity
+
+This module contains practical implementations of classical substitution ciphers and modern one-way cryptographic hashing.
+
+---
+
+## 1. Classical Caesar Cipher (`caesar_cipher.py`)
+
+A basic symmetric substitution cipher where every letter in the plaintext is shifted by a fixed key value ($K = 3$).
+
+### Terminal Output Preview:
+```text
+Original : Attack at Dawn
+Encrypted: Dwwdfn dw Gdzq
+Decrypted: Attack at Dawn
+```
+
+---
+
+## 2. SHA-256 Hash Integrity & Avalanche Effect (`hash_checker.py`)
+
+Demonstrates how cryptographic hash functions generate a deterministic, fixed 256-bit (64 hex characters) fingerprint. Changing a single digit produces an entirely different hash string (the **Avalanche Effect**).
+
+### Terminal Output Preview:
+```text
+Original text: ThalesSecurity2026
+SHA-256 Hash : a2ef3f7cc8a4d4c61fd066b7bbb08e24dea716a8575ee4da8d638af7316569e1
+
+Modified text: ThalesSecurity2027
+New SHA-256  : 0a430a4a84beb07c4b2b7aeb06062592faabee8e8e671ace662e6ed2d9eb2c9e
+```
+
+---
+
+## 🔑 Key Takeaways
+- **Caesar Cipher:** Symmetric and reversible, but cryptographically broken due to the small key space ($26$ possible shifts).
+- **SHA-256:** One-way function (cannot be decrypted). Used for password verification, file integrity checks, and digital signatures.
